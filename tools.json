@@ -67,13 +67,13 @@
    ]
   },
   "bj": {
-   "version": "0.6",
+   "version": "0.7",
    "description": "bj: blackjack against Chiqu, an ASCII cat. Points only, no money",
    "files": [
     {
      "path": "bjtool/bj.py",
      "name": "bj.py",
-     "sha256": "578e5392c8e423037793ea8838cd47b33f83dc45096cdb1ad8b9ce6b6efa7978"
+     "sha256": "b13490ce4f97086015266675014848d10ef2f1b40312be029f386419e42da20d"
     }
    ]
   }
