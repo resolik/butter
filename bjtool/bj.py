@@ -1,4 +1,4 @@
-"""bj v0.6 - blackjack (twenty-one) against Chiqu, for Butter. Points only: no money, nothing to lose.
+"""bj v0.7 - blackjack (twenty-one) against Chiqu, for Butter. Points only: no money, nothing to lose.
 
 Inside Butter (after  tul install bj  and  trust add bj.py):
     bj                       show the table (or how to start)
@@ -22,7 +22,7 @@ import random
 import re
 import sys
 
-VERSION = "0.6"
+VERSION = "0.7"
 NAME = "Chiqu"
 CMD = "bj"                       # how the game is started (Butter has the bj command; without it use "py bj.py")
 START_POINTS = 100
@@ -82,18 +82,20 @@ def cat(mood):
 
 
 LINES = {
-    "welcome": ["Meow! I'm %s. Want to play blackjack?" % NAME, "Purr... sit down. A round of blackjack?"],
-    "deal": ["Cards are out. Meow!", "Let's play! Hit or stand?", "Ready? Your move."],
+    "welcome": ["Meow! I'm %s. Want to play blackjack?" % NAME, "Purr... sit down. A round of blackjack?",
+                "Cards first, then ayran. Deal?"],
+    "deal": ["Cards are out. Meow!", "Let's play! Hit or stand?", "Ready? Your move.", "The winner gets ayran. Meow!"],
     "hit": ["One more card? Brave!", "Here you go. Meow.", "Hmm, that's risky..."],
     "turn": ["Your move!", "Hit or stand?"],
     "double": ["Double it?! Bold!", "Ooh, all in on one card!"],
     "win": ["Meow?! You beat me. Fair and square.", "Nice hand! I'll get you next time.",
-            "Okay, okay, that one is yours.", "Tch... beginner's luck?"],
+            "Okay, okay, that one is yours.", "Tch... beginner's luck?", "You win. I'll go drink some ayran."],
     "blackjack": ["Blackjack?! No way... 3 to 2 for you.", "A natural! I'm impressed!"],
-    "lose": ["Mine! Better luck next time~", "I win this one. Cards don't lie.", "Purr... the house always smiles."],
-    "bust": ["Over 21! Careful, careful~", "Oops, too greedy!", "Bust! What a pity."],
-    "push": ["A tie! Your bet is safe.", "Same score. Let's call it even."],
-    "loan": ["Out of points? I'll lend you %d from my fish money. Shh!" % LOAN],
+    "lose": ["Mine! Better luck next time~", "I win this one. Cards don't lie.", "Purr... the house always smiles.", "Mine! Now where is my ayran?"],
+    "bust": ["Over 21! Careful, careful~", "Oops, too greedy!", "Bust! What a pity.", "Over 21! I need ayran after that."],
+    "push": ["A tie! Your bet is safe.", "Same score. Let's call it even.", "A tie. Ayran break?"],
+    "loan": ["Out of points? I'll lend you %d from my fish money. Shh!" % LOAN,
+             "Broke? Take %d. My ayran money. Shh!" % LOAN],
 }
 OUTCOMES = {"win": "wow", "blackjack": "wow", "lose": "smug", "bust": "smug", "push": "wink"}
 
